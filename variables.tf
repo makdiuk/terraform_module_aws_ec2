@@ -1,3 +1,8 @@
+variable "name" {
+  description = "Name to be used on all the resources as identifier"
+  type        = string
+}
+
 variable "instance_type" {
   description = "EC2 instance type"
   type        = string
