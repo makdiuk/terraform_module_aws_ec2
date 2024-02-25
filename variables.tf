@@ -9,6 +9,12 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
+variable "http_token" {
+  description = "http token"
+  type        = string
+  default     = "required"
+}
+
 variable "tags" {
   description = "A map of tags to add to all resources"
   type        = map(string)

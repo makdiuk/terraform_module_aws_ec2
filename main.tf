@@ -3,7 +3,10 @@ resource "aws_instance" "terraform" {
   instance_type = "t2.micro"
   key_name      = var.key_name
   subnet_id     = var.subnet_id
-
+  
+  metadata_options {
+    http_tokens = var.http_token  
+  }
   tags = merge(var.tags, {
     Name = "ec2-${var.name}"
   })
