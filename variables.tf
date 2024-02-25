@@ -9,3 +9,8 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "key_name" {
+  description = "The name of the key pair"
+  type        = string
+}
