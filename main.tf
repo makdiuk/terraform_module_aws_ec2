@@ -3,3 +3,7 @@ resource "aws_instance" "terraform" {
   instance_type = "t2.micro"
   tags          = var.tags
 }
+
+output "ami" {
+  value = aws_instance.terraform.ami
+}
